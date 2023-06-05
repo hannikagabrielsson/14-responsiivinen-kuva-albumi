@@ -1,0 +1,22 @@
+
+/* Mobile first */
+html {
+    font-size: 62,5%;
+    }
+    
+    
+/* tablet-näkymä */
+
+@media only screen and (min-width: 426px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+
+  /* desktop-näkymä */
+
+  @media only screen and (min-width: 769px) {
+    body {
+      background-color: lightblue;
+    }
+  }
