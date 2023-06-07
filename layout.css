@@ -1,22 +1,94 @@
 
-/* Mobile first */
+/* Desktop first */
+
 html {
     font-size: 62,5%;
     }
     
-    
-/* tablet-näkymä */
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
-@media only screen and (min-width: 426px) {
-    body {
-      background-color: lightblue;
-    }
+.grid {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+figBox {
+  padding-bottom: 20%;
+  width: 20%;
+  background-color: bisque;
+}
+
+figure img {
+  width: 20%;
+  position:absolute;
+}
+
+title {
+  font-size: 100;
+  width: 20%;
+  position: absolute;
+  display: inline;
+  padding-top: 10%;
+  text-align: center;
+}
+
+figure img:hover {
+  display: none;
+}
+
+
+@media only screen and (max-width : 480px) {
+  /* Smartphone view: 1 tile */
+  figBox {
+    padding-bottom: 100%;
+    width: 100%;
   }
 
-  /* desktop-näkymä */
-
-  @media only screen and (min-width: 769px) {
-    body {
-      background-color: lightblue;
-    }
+  figure img, title {
+    width: 100%;
   }
+}
+
+@media only screen and (max-width : 650px) and (min-width : 481px) {
+  /* Tablet view: 2 tiles */
+  figBox {
+    padding-bottom: 50%;
+    width: 50%;
+  }
+
+  figure img, title {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width : 1050px) and (min-width : 651px) {
+  /* Small desktop / ipad view: 3 tiles */
+  figBox {
+    padding-bottom: 33.3%;
+    width: 33.3%;
+  }
+
+  figure img, title {
+    width: 33.3%;
+  }
+}
+
+@media only screen and (max-width : 1290px) and (min-width : 1051px) {
+  /* Medium desktop: 4 tiles */
+  figBox {
+    padding-bottom: 25%;
+    width: 25%;
+  }
+
+  figure img, title {
+    width: 25%;
+  }
+}
